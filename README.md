@@ -7,6 +7,8 @@ Comment concevoir et mettre en œuvre efficacement un processus de transformatio
 
 ## Solution Proposée
 Pour optimiser l'ingénierie dirigée par les modèles, on a exploité les capacités d'Eclipse EMF Modeling pour créer des méta-modèles détaillés représentant les structures des User Stories et du BPMN. En utilisant l'ATL (Atlas Transformation Language), on a élaboré des règles de transformation précises pour convertir les données des User Stories en modèles BPMN. Cette approche a assuré une conversion précise, alignée sur les besoins spécifiques des processus métier. L'utilisation des fonctionnalités d'Eclipse pour vérifier et valider les modèles BPMN générés a garanti leur conformité aux spécifications. Cette combinaison d'outils a permis de créer une solution robuste pour la transformation fiable des User Stories en modèles BPMN.
+### Architecture
+![Architecture](./metamodels/architecture-mde.drawio.png)
 ### Métamodèles
 #### Métamodèle User Stories
 ![Métamodèle User Stories](./metamodels/userstory.png)
