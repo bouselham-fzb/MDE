@@ -16,6 +16,5 @@ Pour optimiser l'ingénierie dirigée par les modèles, on a exploité les capac
 ![Métamodèle BPMN](./metamodels/bpmn.png)
 
 ## Conclusion
-La transformation des User Stories en BPMN via l'Ingénierie Dirigée par les Modèles (MDE) fut enrichissante. L'approche formelle a clarifié la vision du système et automatisé la génération de code, réduisant les erreurs et accélérant le développement. Les outils MDE ont été cruciaux pour créer des représentations claires et cohérentes. Ce rapport conclut une expérience enrichissante, offrant une vue concise du projet et une contribution positive à ses lecteurs.
 
-
+En résumé, la transformation des User Stories en langage BPMN via l'Ingénierie Dirigée par les Modèles (MDE) a été une expérience enrichissante, permettant l'application concrète des connaissances acquises. L'adoption de modèles formels a simplifié la compréhension du comportement du système, avec une méthodologie claire et une validation structurée des spécifications. L'automatisation de la génération de code a réduit les erreurs de programmation et accéléré le cycle de développement. Les outils MDE, tels que les langages de modélisation, ont joué un rôle central, facilitant la création de représentations abstraites des User Stories tout en assurant la cohérence entre spécifications et mise en œuvre. En vue d'optimiser le projet, une adaptation de l'approche par l'intégration de règles de transformation supplémentaires est envisagée pour améliorer précision, couverture et qualité des résultats.
