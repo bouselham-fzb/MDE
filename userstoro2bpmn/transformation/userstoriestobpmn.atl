@@ -1,0 +1,73 @@
+-- @path MM=/userstoro2bpmn/metamodels/userstory.ecore
+-- @path MM1=/userstoro2bpmn/metamodels/bpmn.ecore
+
+module userstoriestobpmn;
+create OUT : MM1 from IN : MM;
+
+-- Règle de transformation pour Backlog vers Process
+rule Backlog2Process {
+    from
+        source : MM!Backlog
+    to
+        target : MM1!Process (
+            name <- 'BPMNProcess'
+			--lanes <- source.uss->collect(u | thisModule.UserStory2Task(u))->asOrderedSet(),
+            --links <- source.uss->collect(u | thisModule.GenerateSequentialLinks(u))
+        )
+}
+
+-- Règle de transformation pour UserStory vers Task
+--rule UserStory2Task {
+--    from
+--        source : MM!UserStory
+--    to
+--        target : MM1!Task (
+--            name <- source.description
+--        )
+--}
+
+-- Règle de transformation pour Activity vers Task
+rule Activity2Task {
+    from
+        source : MM!Activity
+    to
+        target : MM1!Task (
+            name <- source.name
+        )
+}
+rule Role2Lane {
+    from
+        source : MM!Role
+    to
+        target : MM1!Lane (
+            name <- source.name,
+			namelane <- source.name
+			
+        )
+}
+
+
+--rule UserStory2Task {
+--    from
+--        source : MM!UserStory
+--    to
+--        target : MM1!Task (
+--            name <- source.description
+--        )
+--}
+
+-- Autres règles de transformation ici...
+
+rule GenerateSequentialLinks {
+    from
+        us1: MM!Activity,
+        us2: MM!Activity (
+            us1.id.toInteger() + 1 = us2.id.toInteger()
+        )
+    to
+        link: MM1!Link (
+            name <- 'link ' + us1.id + '-' + us2.id,
+            source <- us1,
+            target <- us2
+        )
+}

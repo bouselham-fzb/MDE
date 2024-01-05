@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<us:Backlog
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:us="http://www.example.com/modele">
+  <uss id="1"
+      description="regestration">
+    <activities
+        preconditions="Les champs obligatoires du formulaire d'inscription sont présents et valides."
+        postconditions="Un compte utilisateur est créé"
+        id="1"
+        name="register"/>
+    <roles name="Simple USER"/>
+  </uss>
+  <uss id="2"
+      description="user story 3">
+    <activities
+        preconditions="Il existe une demande d'inscription en attente "
+        postconditions="L'administrateur a accepté la demande d'inscription."
+        id="2"
+        name="Accept user's registration "/>
+    <roles name="Admin"/>
+  </uss>
+  <uss id="3"
+      description="authentification">
+    <activities
+        preconditions="L'utilisateur a un compte"
+        postconditions="L'utilisateur est authentifié avec succès."
+        id="3"
+        name="Login"/>
+    <roles name="Client"/>
+  </uss>
+</us:Backlog>

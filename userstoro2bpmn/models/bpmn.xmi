@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bp="http://www.example.com/modeles">
+  <bp:Process name="BPMNProcess"/>
+  <bp:Task name="register"/>
+  <bp:Task name="Accept user's registration "/>
+  <bp:Task name="Login"/>
+  <bp:Lane name="Simple USER" namelane="Simple USER"/>
+  <bp:Lane name="Admin" namelane="Admin"/>
+  <bp:Lane name="Client" namelane="Client"/>
+  <bp:Link name="link 1-2" source="/1" target="/2"/>
+  <bp:Link name="link 2-3" source="/2" target="/3"/>
+</xmi:XMI>
